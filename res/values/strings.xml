@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Instagram OAuth</string>
+    
+    <string name="lbl_login">Login</string>
+    <string name="lbl_logout">Logout</string>
+    <string name="lbl_usr_info">Get user info</string>
+    <string name="lbl_usr_photo">Get user photos</string>
+    <string name="lbl_cmnt">Get comments</string>
+    
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView
+        android:id="@+id/imgvw_ig_prof_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"  
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"     
+        android:background="@drawable/default_image_square"/>
+
+    <TextView
+        android:id="@+id/txt_ig_usr_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgvw_ig_prof_pic"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"  
+        android:singleLine="true"
+        android:text="Username" />
+
+    <TextView
+        android:id="@+id/txt_ig_created_at"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txt_ig_usr_name"
+        android:gravity="right"
+        android:layout_margin="@dimen/margin"        
+        android:singleLine="true"
+        android:text="Time" />
+
+   <!--  <ImageView
+        android:id="@+id/imgvw_ig_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_ig_usr_name"
+        android:scaleType="centerCrop"
+        android:background="@drawable/default_image_square"/> -->
+        
+        <RelativeLayout
+            android:id="@+id/rel_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/txt_ig_usr_name"
+            android:layout_alignRight="@id/txt_ig_created_at"
+            android:layout_below="@+id/txt_ig_usr_name"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginTop="@dimen/margin" >
+            
+            <ImageView
+                android:id="@+id/imgvw_ig_media"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"                
+                android:background="@drawable/default_image_square"
+                android:scaleType="centerCrop" />
+            
+            <ImageView
+                android:id="@+id/imgvw_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_play"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/txt_ig_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel_media"
+        android:layout_alignLeft="@id/rel_media" 
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"    
+        android:text="Caption" />
+    
+    <!-- Like count -->
+    <TextView
+        android:id="@+id/txt_ig_like_count"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"        
+        android:layout_below="@id/txt_ig_caption"
+        android:layout_alignParentBottom="true"      
+        android:text="Like count " />
+    
+    <!-- Comment count -->
+    <TextView
+        android:id="@+id/txt_ig_cmnt_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_ig_caption"
+        android:layout_toRightOf="@id/txt_ig_like_count"        
+        android:layout_alignParentBottom="true"
+        android:text=" Comment count"/>
+    
+    <!-- Buttons panel -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_ig_caption"
+        android:layout_alignParentBottom="true" 
+        android:layout_marginBottom="@dimen/margin"       
+        android:layout_toRightOf="@id/txt_ig_cmnt_count"
+        android:gravity="right" >
+
+        <ImageView
+            android:id="@+id/imgvw_ig_like"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/icon"/>
+
+        <ImageView
+            android:id="@+id/imgvw_ig_cmnt"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/icon"/>        
+    </LinearLayout>
+
+</RelativeLayout>
